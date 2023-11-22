@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --bg-gradient-top: hsl(252, 100%, 67%);
+  --bg-gradient-bottom: hsl(241, 81%, 54%);
+  --bg-gradient-circle-top: hsla(256, 72%, 46%, 1);
+  --bg-gradient-circle-bottom: hsla(241, 72%, 46%, 0);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card {
+  aspect-ratio: 16/11;
+  border-radius: 20px;
+  display: flex;
+  min-height: 400px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.left,
+.right {
+  width: 50%;
+}
+
+.left {
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 2em;
+  background: linear-gradient(180deg, #5c3ff7, #332de9);
+}
+
+.left > p {
+  font-size: 1.6rem;
+  color: hsla(221, 100%, 96%, 0.7);
+  font-weight: 700;
+}
+
+.score {
+  background: linear-gradient(
+    to bottom,
+    var(--bg-gradient-circle-top),
+    var(--bg-gradient-circle-bottom)
+  );
+  aspect-ratio: 1/1;
+  max-width: 57%;
+  margin: auto;
+  margin-top: 1.125rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.score p:first-child {
+  color: #fff;
+  font-size: clamp(30px, 8vw, 85px);
+  font-weight: 800;
+}
+
+.score p {
+  color: hsla(221, 100%, 96%, 0.5);
+}
+
+.status {
+  padding-top: 2rem;
+}
+
+.status p:first-child {
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.status p:last-child {
+  color: hsla(221, 100%, 96%, 0.7);
+  text-align: center;
+  font-size: 18px;
+  padding-top: 1rem;
+  margin-inline: auto;
+  align-self: center;
+  width: 60%;
+}
+
+/*Right Section*/
+.right {
+  padding: 2em;
+}
+
+.right > h3 {
+  font-size: 1.6rem;
+}
+
+.card-section {
+  display: grid;
+  row-gap: 1.125rem;
+  padding-top: 1.25rem;
+}
+
+.small-card {
+  background-color: gray;
+  display: flex;
+  min-height: 68px;
+  border-radius: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+}
+
+.small-card > div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.small-card > div p {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.small-card:nth-child(1) {
+  background: hsla(0, 100%, 67%, 0.2);
+  color: hsl(0, 100%, 67%);
+}
+
+.small-card:nth-child(2) {
+  background: hsla(39, 100%, 56%, 0.2);
+  color: hsl(39, 100%, 56%);
+}
+.small-card:nth-child(3) {
+  background: hsla(166, 100%, 37%, 0.2);
+  color: hsl(166, 100%, 37%);
+}
+.small-card:nth-child(4) {
+  background: hsla(234, 85%, 45%, 0.2);
+  color: hsl(234, 85%, 45%);
+}
+
+.small-card > p {
+  color: hsla(224, 30%, 27%, 0.3);
+  font-weight: 700;
+}
+
+.small-card > p > span {
+  color: hsl(224, 30%, 27%);
+  margin-right: 0.25rem;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-radius: 2.2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(
+    to bottom,
+    hsl(224, 30%, 27%),
+    hsl(224, 30%, 27%)
+  );
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 1)
+  );
+  transition: background 0.3s ease;
+}
