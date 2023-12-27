@@ -25,7 +25,6 @@ button {
 }
 
 .card {
-  aspect-ratio: 16/11;
   border-radius: 20px;
   display: flex;
   min-height: 400px;
@@ -173,16 +172,74 @@ button {
   background: linear-gradient(
     to bottom,
     hsl(224, 30%, 27%),
-    hsl(224, 30%, 27%)
+    hsl(224, 30%, 27%),
+    hsla(256, 72%, 46%, 1) 50%,
+    hsla(241, 72%, 46%, 1)
   );
-  transition: background 0.3s ease;
+  background-size: 100% 400%;
+
+  transition: background 1.3s ease;
 }
 
 .btn:hover {
-  background: linear-gradient(
-    to bottom,
-    hsla(256, 72%, 46%, 1),
-    hsla(241, 72%, 46%, 1)
-  );
-  transition: background 0.3s ease;
+  background-position: 300%;
+}
+
+@media screen and (max-width: 991px) {
+  .card {
+    margin: 0 2rem;
+  }
+  .btn {
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 771px) {
+  body {
+    place-items: initial;
+  }
+  .card {
+    flex-direction: column;
+    margin: 0rem;
+  }
+
+  .card,
+  .left,
+  .right {
+    border-radius: 0;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    border-radius: 0 0 20px 20px;
+    padding-bottom: 35px;
+  }
+
+  .left > p {
+    width: inherit;
+  }
+
+  .status p:last-child {
+    width: 70%;
+    font-size: revert;
+  }
+
+  .right {
+    padding: 1rem;
+  }
+
+  .right > h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 772px) {
+  .card {
+    aspect-ratio: 16/11;
+  }
 }
