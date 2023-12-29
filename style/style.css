@@ -131,20 +131,20 @@ button {
   letter-spacing: 1px;
 }
 .small-card:nth-child(1) {
-  background: hsla(0, 100%, 67%, 0.2);
+  background: hsla(0, 100%, 67%, 0.05);
   color: hsl(0, 100%, 67%);
 }
 
 .small-card:nth-child(2) {
-  background: hsla(39, 100%, 56%, 0.2);
+  background: hsla(39, 100%, 56%, 0.05);
   color: hsl(39, 100%, 56%);
 }
 .small-card:nth-child(3) {
-  background: hsla(166, 100%, 37%, 0.2);
+  background: hsla(166, 100%, 37%, 0.05);
   color: hsl(166, 100%, 37%);
 }
 .small-card:nth-child(4) {
-  background: hsla(234, 85%, 45%, 0.2);
+  background: hsla(234, 85%, 45%, 0.05);
   color: hsl(234, 85%, 45%);
 }
 
