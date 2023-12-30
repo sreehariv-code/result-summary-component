@@ -7,21 +7,30 @@ async function fetchData() {
       throw new Error("Netwrok response was not ok");
     }
     myData = await response.json();
+
+    if (!myData) {
+      throw new Error("Data is empty or undefined");
+    }
   } catch (error) {
     console.error("Error fetching or parsing data: ", error);
   }
 }
-fetchData().then(() => {
-  const cardSection = document.querySelector(".card-section");
-  for (const card of myData) {
-    const smallCard = createSmallCard(card);
-    cardSection.appendChild(smallCard);
-  }
 
-  const continueButton = document.createElement("button");
-  continueButton.className = "btn";
-  continueButton.textContent = "Continue";
-  cardSection.appendChild(continueButton);
+fetchData().then(() => {
+  if (myData) {
+    const cardSection = document.querySelector(".card-section");
+    for (const card of myData) {
+      const smallCard = createSmallCard(card);
+      cardSection.appendChild(smallCard);
+    }
+
+    const continueButton = document.createElement("button");
+    continueButton.className = "btn";
+    continueButton.textContent = "Continue";
+    cardSection.appendChild(continueButton);
+  } else {
+    console.error("Data is undefined. Cannot create cards.");
+  }
 });
 
 function createSmallCard(card) {
