@@ -31,7 +31,7 @@ Users should be able to:
   ![Desktop Active image](./screenshots/desktop-view-active.png)
 - <b>Mobile View</b>
 
-  ![Desktop Active image](./screenshots/mobile-view.png)
+    <img src="./screenshots/mobile-view.png" width=300>
 
 ### Links
 
