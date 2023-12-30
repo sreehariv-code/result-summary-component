@@ -24,7 +24,12 @@ button {
   cursor: pointer;
 }
 
-.card {
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.result-card {
   border-radius: 20px;
   display: flex;
   min-height: 400px;
@@ -32,19 +37,19 @@ button {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.left,
-.right {
+.result-details,
+.summary-section {
   width: 50%;
 }
 
-.left {
+.result-details {
   border-radius: 20px;
   text-align: center;
   padding-top: 2em;
   background: linear-gradient(180deg, #5c3ff7, #332de9);
 }
 
-.left > p {
+.result-details p {
   font-size: 1.6rem;
   color: hsla(221, 100%, 96%, 0.7);
   font-weight: 700;
@@ -95,12 +100,12 @@ button {
   width: 60%;
 }
 
-/*Right Section*/
-.right {
+/* Right Section */
+.summary-section {
   padding: 2em;
 }
 
-.right > h3 {
+.summary-section h2 {
   font-size: 1.6rem;
 }
 
@@ -130,6 +135,7 @@ button {
   font-weight: 700;
   letter-spacing: 1px;
 }
+
 .small-card:nth-child(1) {
   background: hsla(0, 100%, 67%, 0.05);
   color: hsl(0, 100%, 67%);
@@ -139,10 +145,12 @@ button {
   background: hsla(39, 100%, 56%, 0.05);
   color: hsl(39, 100%, 56%);
 }
+
 .small-card:nth-child(3) {
   background: hsla(166, 100%, 37%, 0.05);
   color: hsl(166, 100%, 37%);
 }
+
 .small-card:nth-child(4) {
   background: hsla(234, 85%, 45%, 0.05);
   color: hsl(234, 85%, 45%);
@@ -186,7 +194,7 @@ button {
 }
 
 @media screen and (max-width: 991px) {
-  .card {
+  .result-card {
     margin: 0 2rem;
   }
   .btn {
@@ -199,28 +207,28 @@ button {
   body {
     place-items: initial;
   }
-  .card {
+  .result-card {
     flex-direction: column;
     margin: 0rem;
   }
 
-  .card,
-  .left,
-  .right {
+  .result-card,
+  .result-details,
+  .summary-section {
     border-radius: 0;
   }
 
-  .left,
-  .right {
+  .result-details,
+  .summary-section {
     width: 100%;
   }
 
-  .left {
+  .result-details {
     border-radius: 0 0 20px 20px;
     padding-bottom: 35px;
   }
 
-  .left > p {
+  .result-details p {
     width: inherit;
   }
 
@@ -229,17 +237,17 @@ button {
     font-size: revert;
   }
 
-  .right {
+  .summary-section {
     padding: 1rem;
   }
 
-  .right > h3 {
+  .summary-section h2 {
     font-size: 1.4rem;
   }
 }
 
 @media screen and (min-width: 772px) {
-  .card {
+  .result-card {
     aspect-ratio: 16/11;
   }
 }
