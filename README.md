@@ -30,6 +30,7 @@ Users should be able to:
 - <b>Active State</b>
   ![Desktop Active image](./screenshots/desktop-view-active.png)
 - <b>Mobile View</b>
+
   ![Desktop Active image](./screenshots/mobile-view.png)
 
 ### Links
