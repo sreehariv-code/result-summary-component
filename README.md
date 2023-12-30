@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: Click [Here](https://github.com/sreehariv-code/result-summary-component)
-- Live Site URL: Click [Here](https://sreehariv-code.github.io/result-summary-component/)
+- Live Site URL: Click <a href="https://sreehariv-code.github.io/result-summary-component/">Here</a>
 
 ## My process
 
