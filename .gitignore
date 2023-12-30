@@ -16,4 +16,5 @@
 .prettierignore
 
 #Removing Template file
-./README-template.md
+
+README-template.md
